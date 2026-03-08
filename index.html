@@ -254,67 +254,45 @@
 
         /* SOCIAL PROOF */
         .section-proof {
-            background: none;
-            padding: 0;
-        }
-
-        .stats-dark-bar {
-            background: linear-gradient(135deg, rgba(26,36,14,0.97) 0%, rgba(42,58,20,0.97) 100%);
-            backdrop-filter: blur(6px);
-            padding: 56px 40px;
-        }
-
-        .stats-dark-bar .eyebrow {
-            color: rgba(255,255,255,0.55);
-            letter-spacing: 0.12e
-            
-
-
-
-
-
-
-
-
-
+            background: rgba(255,255,255,0.88);
+            padding: 80px 0;
             text-align: center;
         }
 
-        .stats-dark-bar .section-title {
-            color: #fff;
-            text-align: center;
-        }
+        .section-proof .eyebrow { text-align: center; }
+        .section-proof .section-title { text-align: center; }
 
         .stats-row {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(5, minmax(0, 190px));
+            justify-content: center;
             gap: 0;
-            margin: 48px 0 0;
+            margin: 48px auto 0;
         }
 
         .stat-card {
-            padding: 32px 24px;
+            padding: 32px 20px;
             text-align: center;
-            border-left: 1px solid rgba(255,255,255,0.12);
+            border-left: 1px solid rgba(0,0,0,0.08);
             position: relative;
         }
         .stat-card:last-child { border-left: none; }
 
         .stat-number {
-            font-size: clamp(34px, 4vw, 54px);
+            font-size: clamp(34px, 4vw, 52px);
             font-weight: 900;
-            color: #fff;
+            color: var(--olive-dark);
             line-height: 1;
             margin-bottom: 12px;
         }
 
         .stat-label {
             font-size: 13px;
-            color: rgba(255,255,255,0.65);
+            color: var(--text-mid);
             line-height: 1.55;
         }
 
-        .progress-block {
+                .progress-block {
             background: rgba(255,255,255,0.92);
             border-radius: 18px;
             padding: 32px 36px;
@@ -428,13 +406,11 @@
             color: var(--blue-dark);
         }
         @media (max-width: 1100px) {
-            .stats-row { grid-template-columns: repeat(3, 1fr); }
-            .stat-card { border-left: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.08); }
+            .stats-row { grid-template-columns: repeat(3, minmax(0, 190px)); }
         }
         @media (max-width: 900px) {
             .testimonials-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-            .stats-row { grid-template-columns: repeat(2, 1fr); }
-            .stats-dark-bar { padding: 40px 20px; }
+            .stats-row { grid-template-columns: repeat(2, minmax(0, 190px)); }
         }
         @media (max-width: 600px) {
             .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -689,7 +665,7 @@
         </figure>
 
         <div class="body-text">
-            <p>ברוך השם, דנה ניצלה. אבל האמת היא, שההצלה שלנו כאן היא לא רק פיזית. <strong>היא בעיקר הצלת הנפש.</strong></p>
+            <p>ב��וך השם, דנה ניצלה. אבל האמת היא, שההצלה שלנו כאן היא לא רק פיזית. <strong>היא בעיקר הצלת הנפש.</strong></p>
         </div>
 
         <figure class="article-figure">
@@ -776,37 +752,33 @@
 
 <!-- 5. SOCIAL PROOF -->
 <section class="section-proof">
-    <div class="stats-dark-bar">
-        <div class="container">
-            <div class="eyebrow">התוצאות בשטח</div>
-            <h2 class="section-title">5 שנים של עשייה אמיתית — המספרים מדברים בעד עצמם</h2>
+    <div class="container">
+        <div class="eyebrow">התוצאות בשטח</div>
+        <h2 class="section-title">5 שנים של עשייה אמיתית — המספרים מדברים בעד עצמם</h2>
 
-            <div class="stats-row">
-                <div class="stat-card">
-                    <div class="stat-number">15,600+</div>
-                    <div class="stat-label">לוחמים ומטיילים שזכו לבית חם ומחבק בקצה העולם במהלך 5 השנים האחרונות</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">31,200</div>
-                    <div class="stat-label">סעודות ביתיות שהוגשו באהבה ובשפע, ונתנו טעם של בית וביטחון לכל לוחם ולוחמת</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">260</div>
-                    <div class="stat-label">שבתות רצופות שבהן האור בבית חב"ד לא כבה מעולם, שבוע אחר שבוע, שנה אחר שנה</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">5,000+</div>
-                    <div class="stat-label">רגעי חיבור של הנחת תפילין, שיחות נפש וייעוץ רגשי ללוחמים משוחררים ונופשים</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">מענה לכל צורך — מעזרה רפואית ועד איתור וסיוע במצבי חירום עבור המטיילים והוריהם בארץ</div>
-                </div>
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-number">15,600+</div>
+                <div class="stat-label">לוחמים ומטיילים שזכו לבית חם ומחבק בקצה העולם במהלך 5 השנים האחרונות</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">31,200</div>
+                <div class="stat-label">סעודות ביתיות שהוגשו באהבה ובשפע, ונתנו טעם של בית וביטחון לכל לוחם ולוחמת</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">260</div>
+                <div class="stat-label">שבתות רצופות שבהן האור בבית חב"ד לא כבה מעולם, שבוע אחר שבוע, שנה אחר שנה</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5,000+</div>
+                <div class="stat-label">רגעי חיבור של הנחת תפילין, שיחות נפש וייעוץ רגשי ללוחמים משוחררים ונופשים</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">מענה לכל צורך — מעזרה רפואית ועד איתור וסיוע במצבי חירום עבור המטיילים והוריהם בארץ</div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
         <div class="progress-block">
             <div class="progress-meta">
                 <span>יעד הקמפיין תשפ"ו</span>
