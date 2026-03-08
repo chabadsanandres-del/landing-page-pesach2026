@@ -33,12 +33,25 @@
             background-color: #fff;
         }
 
-        /* Background image on html element for cross-browser mix-blend-mode support */
+        /* Background image on html — needed for mix-blend-mode support */
         html {
             background-image: url('https://raw.githubusercontent.com/chabadsanandres-del/landing-page-pesach2026/main/%D7%97%D7%99%D7%99%D7%9C%20%D7%95%D7%A8%D7%91.jpeg');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
+        }
+
+        /* Blurred frosted overlay — image shows through but soft and muted */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: -20px;
+            background-image: url('https://raw.githubusercontent.com/chabadsanandres-del/landing-page-pesach2026/main/%D7%97%D7%99%D7%99%D7%9C%20%D7%95%D7%A8%D7%91.jpeg');
+            background-size: cover;
+            background-position: center center;
+            filter: blur(18px);
+            opacity: 0.35;
+            z-index: -1;
         }
 
         img { display: block; max-width: 100%; }
