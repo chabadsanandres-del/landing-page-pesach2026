@@ -124,7 +124,7 @@
 
         /* HERO */
         .hero {
-            background: #fff;
+            background: rgba(255,255,255,0.82);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -201,21 +201,12 @@
 
         /* SOLUTION */
         .section-solution {
-            position: relative;
-        }
-        .section-solution::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('https://raw.githubusercontent.com/chabadsanandres-del/landing-page-pesach2026/main/%D7%97%D7%99%D7%91%D7%95%D7%A7%20%D7%92%D7%91%D7%A8%D7%99.jpeg');
+            background-image:
+                linear-gradient(rgba(242,244,234,0.80), rgba(242,244,234,0.80)),
+                url('https://raw.githubusercontent.com/chabadsanandres-del/landing-page-pesach2026/main/%D7%97%D7%99%D7%91%D7%95%D7%A7%20%D7%92%D7%91%D7%A8%D7%99.jpeg');
             background-size: cover;
-            background-position: center top;
-            opacity: 0.22;
-            z-index: 0;
-        }
-        .section-solution .container {
-            position: relative;
-            z-index: 1;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .cta-center {
@@ -762,7 +753,7 @@
 <!-- 6. FINAL CTA -->
 <section class="section-cta">
     <div class="container">
-        <div class="eyebrow">הצטרפו עכ��יו</div>
+        <div class="eyebrow">הצטרפו עכשיו</div>
         <h2 class="section-title">אנחנו לא יכולים להמשיך לעשות את זה לבד.</h2>
 
         <div class="body-text" style="max-width:640px;margin:0 auto;">
