@@ -598,6 +598,42 @@
             .trust-row { gap: 10px; }
             .trust-pill { font-size: 12px; padding: 6px 12px; }
         }
+
+        /* STICKY CONTACT */
+        .sticky-contact-container {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 99999;
+            direction: rtl;
+        }
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 20px;
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+            transition: transform .2s, box-shadow .2s;
+            white-space: nowrap;
+        }
+        .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.22); }
+        .whatsapp-btn { background: #25d366; }
+        .email-btn    { background: #1DB8DE; }
+        .contact-btn .icon { font-size: 1.2rem; line-height: 1; }
+        @media (max-width: 600px) {
+            .sticky-contact-container { bottom: 16px; left: 16px; gap: 8px; }
+            .contact-btn span:not(.icon) { display: none; }
+            .contact-btn { padding: 13px; border-radius: 50%; }
+        }
     </style>
     <!-- Meta Pixel Code -->
     <script>
@@ -994,5 +1030,18 @@
 
     document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 </script>
+
+<!-- Sticky contact buttons -->
+<div class="sticky-contact-container">
+    <a href="https://wa.me/972508383094?text=היי%20מרדכי,%20אשמח%20לקבל%20פרטים%20נוספים" class="contact-btn whatsapp-btn" target="_blank" rel="noopener">
+        <span class="icon">💬</span>
+        <span>וואטסאפ</span>
+    </a>
+    <a href="mailto:mordechai@chabadsanandres.com" class="contact-btn email-btn">
+        <span class="icon">✉️</span>
+        <span>שלחו מייל</span>
+    </a>
+</div>
+
 </body>
 </html>
